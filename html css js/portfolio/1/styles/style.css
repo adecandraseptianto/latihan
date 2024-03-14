@@ -1,0 +1,191 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@400;700;900&family=Roboto&display=swap");
+
+/* Color Template */
+:root {
+    --primaryTextColor: #11171a; /* untuk Title atau Judul*/
+    --secondaryTextColor: #646466; /* untuk teks biasa */
+
+    --borderLine: #f1f1f1;
+    --lineColor: #d9d9d9; /* untuk line di pre-title*/
+
+    --primaryBackgroundColor: #fff;
+    --secondaryBackgroundColor: #fbfbfb;
+    --thirdBackgroundColor: #f5f3fe;
+
+    --primaryIconColor: rgb(85, 103, 112);
+    --primaryIconColorHover: #354046;
+    --buttonShadow: #d6dcde;
+
+    --sectionPadding: 6rem 0;
+
+    --itemBorderRadius: 0.75rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+
+/* logo and navigation */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0 0 0;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+.nav ul li a {
+    color: var(--primaryTextColor);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.logo a {
+    color: var(--primaryTextColor);
+}
+
+.btn {
+    padding: 1rem 1.5rem;
+    background-color: var(--primaryBackgroundColor);
+    border: 1.5px solid var(--borderLine);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.btn:hover {
+    box-shadow: var(--buttonShadow) 0px 3px 5px;
+}
+
+/* Hamburger Menu */
+.burger {
+    display: none;
+    z-index: 99;
+    top: 33px;
+    right: 35px;
+    position: fixed;
+}
+
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: var(--primaryTextColor);
+    margin: 7px;
+    transition: all 0.3s;
+    z-index: 99;
+}
+
+/* Hero Section */
+#hero {
+    height: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+#hero span {
+    color: var(--primaryIconColor);
+}
+
+/* Titles */
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: var(--secondaryTextColor);
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.pre-title::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background-color: var(--lineColor);
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+}
+/* Hero Name */
+.Hero-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+}
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-right img {
+    width: 90%;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+    color: var(--primaryTextColor);
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.9rem;
+}
+
+p,
+span,
+label,
+input,
+textarea,
+li {
+    color: var(--secondaryTextColor);
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive */
+/* laptop */
+@media screen and (max-width: 1200px) {
+    .main-container {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 720px) {
+    #hero {
+        display: flex;
+        flex-direction: column;
+    }
+}
